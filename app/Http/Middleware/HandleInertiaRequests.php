@@ -2,8 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Request;
 use Inertia\Middleware;
+use Illuminate\Http\Request;
+use App\Helpers\GeneralHelpers;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -29,10 +30,16 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        $helper = new GeneralHelpers();
         return [
             ...parent::share($request),
+            'appName' => config('app.name'),
+            'appVersion' => $helper->getLatestVersion(),
             'auth' => [
                 'user' => $request->user(),
+            ],
+            'flash' => [
+                'message' => fn () => $request->session()->get('message')
             ],
         ];
     }
