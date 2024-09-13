@@ -6,16 +6,16 @@ import VueApexCharts from 'vue3-apexcharts'
 const chartData = {
   series: [
     {
-      name: 'Product One',
-      data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30, 45]
+      name: 'Entries',
+      data: [23, 11, 22, 27, 13, 22, 37, 21, 44]
     },
 
     {
-      name: 'Product Two',
-      data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39, 51]
+      name: 'Inquiries',
+      data: [30, 25, 36, 30, 45, 35, 64, 52, 59]
     }
   ],
-  labels: ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
 }
 
 const chart = ref(null)
@@ -135,8 +135,8 @@ const apexOptions = {
             <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-primary"></span>
           </span>
           <div class="w-full">
-            <p class="font-semibold text-primary">Total Revenue</p>
-            <p class="text-sm font-medium">12.04.2022 - 12.05.2022</p>
+            <p class="font-semibold text-primary">Total Entries</p>
+            <p class="text-sm font-medium">09/11/2024 - 765,997</p>
           </div>
         </div>
         <div class="flex min-w-47.5">
@@ -146,15 +146,15 @@ const apexOptions = {
             <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-secondary"></span>
           </span>
           <div class="w-full">
-            <p class="font-semibold text-secondary">Total Sales</p>
-            <p class="text-sm font-medium">12.04.2022 - 12.05.2022</p>
+            <p class="font-semibold text-secondary">Total Inquiries</p>
+            <p class="text-sm font-medium">09/11/2024 - 1,190,111</p>
           </div>
         </div>
       </div>
       <div class="flex w-full max-w-45 justify-end">
         <div class="inline-flex items-center rounded-md bg-whiter p-1.5 dark:bg-meta-4">
           <button
-            class="rounded bg-white py-1 px-3 text-xs font-medium text-black shadow-card hover:bg-white hover:shadow-card dark:bg-boxdark dark:text-white dark:hover:bg-boxdark"
+            class="rounded py-1 px-3 text-xs font-medium text-black hover:bg-white hover:shadow-card dark:text-white dark:hover:bg-boxdark"
           >
             Day
           </button>
@@ -164,7 +164,7 @@ const apexOptions = {
             Week
           </button>
           <button
-            class="rounded py-1 px-3 text-xs font-medium text-black hover:bg-white hover:shadow-card dark:text-white dark:hover:bg-boxdark"
+            class="rounded py-1 px-3 text-xs font-medium text-black hover:bg-white hover:shadow-card dark:text-white dark:hover:bg-boxdark bg-white shadow-card dark:bg-boxdark"
           >
             Month
           </button>

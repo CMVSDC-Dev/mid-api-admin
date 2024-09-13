@@ -6,15 +6,15 @@ import VueApexCharts from 'vue3-apexcharts'
 const chartData = {
   series: [
     {
-      name: 'Sales',
-      data: [44, 55, 41, 67, 22, 43, 65]
+      name: 'Entries',
+      data: [13, 23, 20, 8, 13, 27, 15]
     },
     {
-      name: 'Revenue',
-      data: [13, 23, 20, 8, 13, 27, 15]
+      name: 'Inquiries',
+      data: [44, 55, 41, 67, 22, 43, 65]
     }
   ],
-  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+  labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
 }
 
 const chart = ref(null)
@@ -24,7 +24,7 @@ const apexOptions = {
   chart: {
     type: 'bar',
     height: 335,
-    stacked: true,
+    stacked: false,
     toolbar: {
       show: false
     },
@@ -39,7 +39,7 @@ const apexOptions = {
         plotOptions: {
           bar: {
             borderRadius: 0,
-            columnWidth: '25%'
+            columnWidth: '50%'
           }
         }
       }
@@ -84,7 +84,7 @@ const apexOptions = {
   >
     <div class="mb-4 justify-between gap-4 sm:flex">
       <div>
-        <h4 class="text-xl font-bold text-black dark:text-white">Profit this week</h4>
+        <h4 class="text-xl font-bold text-black dark:text-white">Total this week</h4>
       </div>
       <div>
         <div class="relative z-20 inline-block">
