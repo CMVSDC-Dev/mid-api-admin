@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+const props = defineProps({
+    total: {
+        type: Object,
+    },
+});
+
 const cardItems = ref([
   {
     icon: `<svg
@@ -16,9 +22,9 @@ const cardItems = ref([
             />
           </svg>`,
     title: 'Total Companies',
-    total: '51',
+    total: props.total.companies,
     color: 'bg-primary',
-    growthRate: 0.43
+    infoUrl: '/companies'
   },
   {
     icon: `<svg
@@ -43,9 +49,9 @@ const cardItems = ref([
             />
           </svg>`,
     title: 'Total Members',
-    total: '1,650',
+    total: props.total.members,
     color: 'bg-success',
-    growthRate: 4.35
+    infoUrl: '/members'
   },
   {
     icon: `<svg
@@ -61,9 +67,9 @@ const cardItems = ref([
             />
           </svg>`,
     title: 'Total Uploads',
-    total: '24,503',
+    total: props.total.uploads,
     color: 'bg-warning',
-    growthRate: 2.59
+    infoUrl: '/uploads'
   },
   {
     icon: `<svg
@@ -79,11 +85,16 @@ const cardItems = ref([
             />
           </svg>`,
     title: 'Total Downloads',
-    total: '993,3876',
+    total: props.total.downloads,
     color: 'bg-danger',
-    growthRate: -0.95
+    infoUrl: '/downloads'
   }
 ])
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 </script>
 
 <template>
@@ -101,12 +112,12 @@ const cardItems = ref([
 
     <div class="mt-4 flex items-end justify-between">
       <div>
-        <h4 class="text-title-md font-bold text-white">{{ item.total }}</h4>
+        <h4 class="text-title-md font-bold text-white">{{ numberWithCommas(item.total) }}</h4>
         <span class="text-sm font-medium text-gray-100">{{ item.title }}</span>
       </div>
 
       <span class="flex items-center gap-1 text-sm font-medium text-gray-200">
-        <Link href="/">More info...</Link>
+        <Link :href="item.infoUrl">More info...</Link>
       </span>
     </div>
   </div>

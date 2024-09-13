@@ -3,6 +3,16 @@ import { ref } from 'vue'
 // @ts-ignore
 import VueApexCharts from 'vue3-apexcharts'
 
+const props = defineProps({
+    total: {
+        type: Object,
+    },
+});
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 const chartData = {
   series: [
     {
