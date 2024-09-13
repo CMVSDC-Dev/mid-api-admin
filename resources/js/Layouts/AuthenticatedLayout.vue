@@ -35,12 +35,12 @@ const showingNavigationDropdown = ref(false);
       <!-- ===== Main Content End ===== -->
 
       <footer class="mt-auto bg-white text-gray-600 dark:bg-boxdark dark:text-gray-200 py-4 px-10">
-        <div class="container mx-auto flex justify-between">
-            <div class="w-1/2">
+        <div class="container mx-auto md:flex text-center md:text-left md:justify-between">
+            <div class="md:w-3/4">
                 <p>&copy; {{ new Date().getFullYear() }} Copyright: <strong><a href="#">{{ $page.props.appName }}</a>.</strong> All rights reserved.</p>
             </div>
-            <div class="w-1/2">
-                <p class="float-right"><b>Version</b> {{ $page.props.appVersion }}</p>
+            <div class="md:w-1/4">
+                <p class="md:float-right"><b>Version</b> {{ $page.props.appVersion }}</p>
             </div>
         </div>
       </footer>
