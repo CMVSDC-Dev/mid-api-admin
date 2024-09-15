@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import BreadcrumbDefault from '@/Components/Breadcrumbs/BreadcrumbDefault.vue'
-import ChartOne from '@/Components/Charts/ChartOne.vue'
-import ChartThree from '@/Components/Charts/ChartThree.vue'
-import ChartTwo from '@/Components/Charts/ChartTwo.vue'
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
+import ChartOne from '@/Pages/Dashboard/Widgets/Charts/ChartOne.vue'
+import ChartThree from '@/Pages/Dashboard/Widgets/Charts/ChartThree.vue'
+import ChartTwo from '@/Pages/Dashboard/Widgets/Charts/ChartTwo.vue'
 
 import { ref } from 'vue'
 

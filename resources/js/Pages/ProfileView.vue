@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
-import BreadcrumbDefault from '@/Components/Breadcrumbs/BreadcrumbDefault.vue'
-import ProfileCard from '@/Components/ProfileCard.vue'
+import BreadcrumbDefault from '@/Components/Breadcrumbs/BreadcrumbDefault.vue';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import ProfileCard from '@/Pages/Profile/Partials/ProfileCard.vue';
+import { ref } from 'vue';
 
 const pageTitle = ref('Profile')
 </script>
