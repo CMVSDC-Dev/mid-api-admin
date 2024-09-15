@@ -1,5 +1,6 @@
 import './bootstrap';
-// import '../css/app.css';
+import '../css/app.css';
+import "../css/custom-table-theme.css";
 import '@assets/css/satoshi.css'
 import '@assets/css/style.css'
 import 'flatpickr/dist/flatpickr.min.css'
@@ -11,6 +12,8 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import { createPinia } from 'pinia'
 import VueApexCharts from 'vue3-apexcharts'
 import router from './router'
+import Vue3EasyDataTable from 'vue3-easy-data-table';
+import 'vue3-easy-data-table/dist/style.css';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -25,6 +28,7 @@ createInertiaApp({
       .use(ZiggyVue)
       .component("Link", Link)
       .component("Head", Head)
+      .component('EasyDataTable', Vue3EasyDataTable)
       .mount(el);
   },
   progress: {

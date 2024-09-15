@@ -1,0 +1,29 @@
+.vue3-easy-data-table[data-v-19cc4b1b] {
+    /* border: none !important; */
+    /* border-radius: 16px 16px 0 0; */
+}
+.vue3-easy-data-table[data-v-32683533] {
+    /* border-radius: 16px 16px 0 0; */
+    border: 1px solid #e6e4e4 !important;
+}
+
+.customize-table {
+    --easy-table-row-border: 1px solid #e4e4e4;
+
+    --easy-table-header-font-size: 14px;
+    --easy-table-header-height: 50px;
+    --easy-table-header-font-color: #fcfcfc;
+    --easy-table-header-background-color: #64748B;
+    --easy-table-body-row-font-size: 14px;
+    --easy-table-footer-font-size: 14px;
+}
+.customize-table thead th:first-child {
+    /* border-radius: 16px 0 0 0; */
+}
+.customize-table thead th:last-child {
+    /* border-radius: 0 16px 0 0; */
+}
+
+.searchValue{
+    border-radius: 16px;
+}
