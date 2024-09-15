@@ -34,7 +34,7 @@ const fetchData = async () => {
   const options = serverOptions.value
   Object.assign(options, { searchField: searchField.value, searchValue: searchValue.value });
   console.log(options)
-  await axios.post('/list-users', options).then(response => {
+  await axios.post('/users/list', options).then(response => {
     items.value = response.data.data.map((item) => {
       return {
         ...item,

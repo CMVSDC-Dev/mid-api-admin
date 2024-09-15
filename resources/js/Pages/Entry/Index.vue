@@ -35,7 +35,7 @@ const fetchData = async () => {
   const options = serverOptions.value
   Object.assign(options, { searchField: searchField.value, searchValue: searchValue.value });
   console.log(options)
-  await axios.post('/list-entries', options).then(response => {
+  await axios.post('/entries/list', options).then(response => {
     items.value = response.data.data;
     serverItemsLength.value = response.data.total;
     loading.value = false;
