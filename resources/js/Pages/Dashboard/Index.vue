@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
-import DataStatsOne from '@/Components/DataStats/DataStatsOne.vue'
-import ChartOne from '@/Components/Charts/ChartOne.vue'
-import ChartTwo from '@/Components/Charts/ChartTwo.vue'
+import DataStatsOne from '@/Pages/Dashboard/Widgets/DataStats/DataStatsOne.vue';
+import ChartOne from '@/Pages/Dashboard/Widgets/Charts/ChartOne.vue';
+import ChartTwo from '@/Pages/Dashboard/Widgets/Charts/ChartTwo.vue';
 
 defineProps({
     total: {
